@@ -1,0 +1,31 @@
+version: "2.3"
+services:
+  pymesh:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pymesh_p36
+    runtime: nvidia
+    stdin_open: true
+    shm_size: "48gb"
+#    volumes:
+#        - /home/fnoic/Desktop/data/:/workspace/Data/
+    volumes:
+        - /home/fnoichl/lake/scanplan/:/workspace/
+    # ports: --
+    command: /bin/bash
+#    deploy:
+#      resources:
+#        reservations:
+#          devices:
+#            - driver: nvidia
+#              capabilities: [gpu]
+#           - device_ids:
+    #        - capabilities: [gpu]
+
+    environment:
+        - LOCAL_UID=${UUID}
+        - LOCAL_GID=${GID}
+        - NVIDIA_VISIBLE_DEVICES=all
+    entrypoint: /usr/local/bin/init.sh
+    command: bash -c 'sudo service ssh start'

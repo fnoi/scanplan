@@ -1,0 +1,13 @@
+{
+  "height options": [1, 1.5],
+  "scene resolution": 0.5,
+  "grid resolution": 0.5,
+  "model file": "00_testroom/testroom5_1.obj",
+  "plane file": "00_testroom/testroom5_1_plane.obj",
+  "model alternative": "01_factory_building/factory_building_tri.obj_1.obj##00_testroom/testroom5_1.obj",
+  "plane alternative": "01_factory_building/factory_building_floors_planes_2.obj##00_testroom/testroom5_1_plane.obj",
+  "work dir": "/handover/",
+  "inlier factor": 1.25,
+  "inlier precision": 2,
+  "min distance": 4
+}

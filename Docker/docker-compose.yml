@@ -1,0 +1,26 @@
+version: "2.3"
+services:
+  scanplan_dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USER_ID: ${USER_ID:-1000}
+    runtime: nvidia
+    shm_size: "64gb"
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+    environment:
+      - DISPLAY=$DISPLAY
+      - NVIDIA_VISIBLE_DEVICES=all
+    stdin_open: true
+    tty: true
+    ports:
+      - "2255:22"
+      - "2256:23"
+    command: bash -c '
+      sudo service ssh start && bash
+      '

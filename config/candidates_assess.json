@@ -1,0 +1,27 @@
+{
+  "minimum distance": 1.5,
+  "maximum distance": 50,
+  "minimum incidence angle": 15,
+  "minimum output angle": 30,
+  "maximum output angle": 180,
+  "minimum local point density": 45000,
+  "scanner point spacing at 10m": 10,
+  "z axis": [0.0, 0.0, -1.0],
+  "debug skip candidate": 1,
+  "time log option": false,
+  "print chosen scanpoints": false,
+  "heatmap export obj": true,
+  "show heatmaps": false,
+  "save heatmaps": false,
+  "heatmaps per iteration": false,
+  "export obj file per scan": false,
+  "export raw scans": false,
+  "greedy area": true,
+  "3d": false,
+
+  "save strategy map": true,
+
+  "additional Models":[],
+  "minimum local point density class": ["class i","class j","class k"],
+  "minimum local point density value": [2e20,50000,0]
+}

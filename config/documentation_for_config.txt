@@ -1,0 +1,89 @@
+model path: File path for loading model to evaluate
+
+Candiate grid path: File path for loading possible scan positions
+
+minimum distance:[double] minimum distance for a scanner to recognize a face
+if 0 then there is no minimum distance
+
+maximum distance:[double] maximum distance for a scanner to recognize a face
+if 0 then there is no maximum distance
+
+minimum incidence angle:[double] minimum incidence angle for a face to be recognize by a scanner
+if 0 no restriction
+
+minimum output angle:[double] blind spot on the bottom of a scanner
+if 0 no restriction
+
+maximum output angle:[double] blind spot on top of a scanner
+if 180 no restriction
+
+minimum local point density: tba
+
+scann point spacing at 10m: tba
+
+z axis: the Vector that will point from the bottom to the top of the Scanner
+Default is [0.,0.,-1.]
+
+debug skip candidate:[double] skips every n candiate 
+default 1
+time log option: tba
+
+greedy type: termination condition for greedy algorithm
+can be a array for multiply config. only values current:
+"count goal", "coverage goal"
+
+greedy weighted:[bool] indecates if greedy should weight faces based on 
+how often this face got hit by the raycast
+can be a array for multiply config.
+
+weight of the weight:[double] weighted the greedy weight.
+only will take an effect if greedy weighted == true
+can be a array for multiply config.
+default 1
+
+count goal:[integer] count of scanpoints until greedy algorithm terminates
+only will take an effect if greedy type contains count goal
+can be a array for multiply config.
+
+coverage goal:[double] coverage of area until greedy algorithm terminates
+only will take an effect if greedy type contains coverage goal
+can be a array for multiply config.
+
+print chosen scanpoints: [bool] turns on consol output of chosen scanpoints
+
+heatmap export obj: [bool] export an obj of the model added with the information 
+which face is covered by the most scanpoints
+
+show heatmaps: [bool] shows heatmap in figure of scanpoints which have the best rating of greedy 
+
+save heatmaps: [bool] safes heatmap as png of scanpoints which have the best rating of greedy 
+
+heatmaps per iteration:[bool] shows heatmaps of scanpoints on each iteration of the greedy algorithm based on there rating
+maybe we dont need this anymore just use show heatmaps
+
+export obj file per scan:[bool] exports for each scanpoint in the strategy an obj which contains all 
+faces that are newly hit with this scanpoint
+
+export raw scans:[bool] only take effect if "export obj file per scan" == true
+Export for each scanpoint in the strategy an obj which contains all faces
+
+greedy area: [bool] Greedy algorithm considers the area of the hit not only the hit
+
+3d: [bool] shows all plot additional in 3D
+
+save strategy map:[bool] turns of visual output of strategys
+
+TSP: [bool] enables TSP route evaluation
+
+##Everything below is only used for the seperated model approach##
+
+additional Models:List of file path for loading additional model to evaluate
+if the list is empty the code runs like in before adding this feature
+
+minimum local point density class: defines Classes as string that are needed for the evalutation of point density on additional models
+Need to have the same number of entries as minimum local point density value
+
+minimum local point density value: int with the restriction for point density on additional models
+Need to have the same number of entries as minimum local point density class
+
+

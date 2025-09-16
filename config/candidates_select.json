@@ -1,0 +1,27 @@
+{
+  "strategy option": "ea",
+  "strategy specs": ["fitness"],
+  "experiment type": ["mixed"],
+  "greedy type": ["coverage goal"],
+  "greedy weighted": false,
+  "weight of the weight": [1],
+  "count goal": [5],
+  "coverage goal": [0.8],
+  "minimum overlap": 0.3,
+  "overlap penalty": 100,
+  "coverage penalty": 100,
+  "length penalty":0.75,
+
+  "population size": 500,
+  "generations":100,
+  "smart mate":true,
+  "smart mutat":true,
+  "max neighborhood":20,
+  "mating probability":0.6,
+  "mutating probability":0.7,
+  "length probability":0.5,
+
+
+  "TSP": true
+  
+}
