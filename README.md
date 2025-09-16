@@ -1,11 +1,36 @@
 # ScanPlan
 
-* currently works in 3 separate steps
-* takes input from ./config
-* takes input from ./data
-* handover intermediate results through ./handover
-* to all: all in one: scanplan_run.py
-* step by step
-  * run candidates_create.py
-  * run candidates_assess.py
-  * run candidates_select.py (evolutionary algo & greedy)
+A 3D mesh processing and scan planning toolkit.
+
+## Setup
+
+1. Create a virtual environment:
+```bash
+python3 -m venv venv
+```
+
+2. Activate the virtual environment:
+```bash
+source venv/bin/activate  # On Unix/macOS
+# or
+.\venv\Scripts\activate  # On Windows
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+To start using the project, ensure the virtual environment is activated:
+```bash
+source venv/bin/activate  # On Unix/macOS
+# or
+.\venv\Scripts\activate  # On Windows
+```
+
+To deactivate the virtual environment when done:
+```bash
+deactivate
+```
